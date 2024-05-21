@@ -1,3 +1,5 @@
+import { MainNav } from "@/components/shorts-ui/Navigation/MainNav";
+import { SideNav } from "@/components/shorts-ui/Navigation/SideNav.";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -11,7 +13,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <MainNav />
+        <main className="flex text-body-color">
+          <SideNav></SideNav>
+          <div className=" w-full">{children}</div>
+        </main>
+      </body>
     </html>
   );
 }
