@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -21,11 +22,13 @@ export default function Home() {
           className="w-full rounded-full bg-background pl-8"
         />
 
-        <Button className="rounded-full  font-[1.25rem]">
-          <div className="mr-2">
-            <AddIcon />
-          </div>
-          New Channel
+        <Button className="rounded-full  font-[1.25rem]" asChild>
+          <Link href="/channel/create">
+            <div className="mr-2">
+              <AddIcon />
+            </div>
+            New Channel
+          </Link>
         </Button>
       </div>
 

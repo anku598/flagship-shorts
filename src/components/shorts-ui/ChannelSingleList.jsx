@@ -54,7 +54,7 @@ export const ChannelSingleList = () => {
         </div>
 
         <div className="ml-[4.5rem]">
-          <Dialog>
+          <Dialog open={open} onOpenChange={setIsOpen}>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <div className="cursor-pointer">
@@ -65,8 +65,8 @@ export const ChannelSingleList = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent
                 align="end"
-                className="rounded-lg shadow-[box-shadow: 0px 0px 33.01px 0px #0000001A;
-              ]"
+                className="
+              "
               >
                 <DropdownMenuItem className="cursor-pointer pr-20">
                   <div className=" mr-4">
@@ -85,20 +85,26 @@ export const ChannelSingleList = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <DialogContent className="flex flex-col justify-center items-center">
+            <DialogContent className="flex flex-col justify-center  rounded-[36px] items-center">
               <DialogHeader>
                 <DialogTitle className="text-[1.25rem] font-medium mb-[1rem]">
                   Are you sure you want to delete this video?
                 </DialogTitle>
               </DialogHeader>
               <DialogFooter>
-                <Button size="lg" className="rounded-full" variant="outline">
+                <Button
+                  size="lg"
+                  className="rounded-full"
+                  variant="outline"
+                  onClick={() => setIsOpen(false)}
+                >
                   Cancel
                 </Button>
                 <Button
                   size="lg"
                   className="rounded-full"
                   variant="destructive"
+                  onClick={() => setIsOpen(false)}
                 >
                   Confirm
                 </Button>

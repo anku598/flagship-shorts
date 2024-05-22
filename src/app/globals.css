@@ -21,7 +21,7 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
     /* --border: 214.3 31.8% 91.4%; */
-    --border: 210, 29%, 93%;
+    --border: 220, 43%, 95%;
     --input: 214.3 31.8% 91.4%;
     --ring: 218, 98%, 60%, 1;
     --radius: 0.5rem;
@@ -58,6 +58,10 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .custom-input-style {
+    @apply rounded-full border-[1px] border-[#C3C7CF] w-full h-10 px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none;
+  }
 }
 
 /* link active style */
@@ -88,4 +92,14 @@
     height: 1.5px;
     background: #181a1e;
   }
+}
+
+.file-upload .inputfile {
+  /* Hide the input file */
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
 }
