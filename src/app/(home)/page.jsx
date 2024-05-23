@@ -1,5 +1,3 @@
-"use client";
-
 import AddIcon from "@/components/SvgIcons/AddIcon";
 import { ChannelSingleList } from "@/components/shorts-ui/ChannelSingleList";
 import { SettingsNav } from "@/components/shorts-ui/Navigation/SettingsNav";

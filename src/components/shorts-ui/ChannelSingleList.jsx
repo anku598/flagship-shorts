@@ -1,4 +1,4 @@
-"use-client";
+"use client";
 
 import { ChannelFollowerIcon } from "../SvgIcons/ChannelFollowerIcon";
 import { ChannelUserIcon } from "../SvgIcons/ChannelUserIcon";

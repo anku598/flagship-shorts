@@ -3,32 +3,21 @@ import { MoreVerticalEditIcon } from "@/components/SvgIcons/MoreVerticalEditIcon
 import { MoveRightIcon } from "@/components/SvgIcons/MoveRightIcon";
 import InputSelect from "@/components/shorts-ui/InputSelect";
 import { MultiSelect } from "@/components/shorts-ui/MultiSelect";
-import { TopHeader } from "@/components/shorts-ui/Navigation/TopHeader";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
-import { Plus, PlusIcon, X } from "lucide-react";
-
-const ChannelCreatePage = async () => {
+import { PlusIcon, X } from "lucide-react";
+export const SingleVideoForm = () => {
   return (
     <div>
-      <TopHeader />
       <div className="w-[85%] mx-auto flex-col lg:flex-row flex lg:gap-[7.5rem] min-h-[calc(100vh-70px)] pb-[4rem]">
-        <div className="file-upload flex flex-col items-center lg:flex-1">
+        <div className="file-upload flex flex-col items-center">
           <input type="file" name="file" id="file" className="inputfile" />
-          <label
-            for="file"
-            className="flex items-center justify-center w-[100px] lg:w-[200px] h-[100px] lg:h-[200px] bg-[#EEF6FF] rounded-full cursor-pointer"
-          >
-            <Plus />
-            <img
-              id="imagePreview"
-              className="hidden w-24 h-24 rounded-full object-cover"
-            />
+          <label htmlFor="file" className="cursor-pointer">
+            <span class="mt-2 text-primary capitalize tracking-[-0.15px] text-[1rem]">
+              Upload Picture
+            </span>
           </label>
-          <span class="mt-2 text-primary capitalize tracking-[-0.15px] text-[1rem]">
-            Upload Picture
-          </span>
         </div>
 
         <div className="w-full">
@@ -113,7 +102,7 @@ const ChannelCreatePage = async () => {
                     <InputSelect />
                     <InputSelect />
                     {/* <InputSelect />
-                    <InputSelect /> */}
+                  <InputSelect /> */}
                     <Button
                       variant="link"
                       className="text-primary items-start justify-start px-0"
@@ -186,5 +175,3 @@ const ChannelCreatePage = async () => {
     </div>
   );
 };
-
-export default ChannelCreatePage;
