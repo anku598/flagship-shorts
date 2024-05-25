@@ -24,7 +24,7 @@ const ChannelCreatePage = async () => {
               className="hidden w-24 h-24 rounded-full object-cover"
             />
           </label>
-          <span class="mt-2 text-primary capitalize tracking-[-0.15px] text-[1rem]">
+          <span className="mt-2 text-primary capitalize tracking-[-0.15px] text-[1rem]">
             Upload Picture
           </span>
         </div>
@@ -60,7 +60,7 @@ const ChannelCreatePage = async () => {
                   <div className="selected-user rounded-full min-w-[300px] bg-[#EEF6FF] flex justify-between items-center px-4 py-2">
                     <div className="flex items-center gap-2">
                       <img
-                        class="inline-block h-[20px] w-[20px] rounded-full"
+                        className="inline-block h-[20px] w-[20px] rounded-full"
                         src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                         alt=""
                       />
@@ -93,7 +93,7 @@ const ChannelCreatePage = async () => {
                     <div className="flex justify-between w-full">
                       <div className="flex items-center gap-4">
                         <img
-                          class="inline-block h-[40px] w-[40px] rounded-full ring-2 ring-white"
+                          className="inline-block h-[40px] w-[40px] rounded-full ring-2 ring-white"
                           src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                           alt=""
                         />

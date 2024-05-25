@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const TopHeader = () => {
   return (
-    <div className="top-header h-[70px] flex justify-between px-10 items-center  border-b-[1px] border-[#C3C7CF] mb-10">
+    <div className="top-header h-[70px] flex justify-between px-10 items-center  border-b-[1px] border-[#EBEFF7] mb-10">
       <Button variant="link">
         {" "}
         <Link href={"/"} className="flex gap-2 items-center">

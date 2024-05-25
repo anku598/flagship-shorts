@@ -1,8 +1,8 @@
 import { MainNav } from "@/components/shorts-ui/Navigation/MainNav";
 import { SideNav } from "@/components/shorts-ui/Navigation/SideNav.";
-import "../globals.css";
+import "../../globals.css";
 
-export default function HomeLayout({ children }) {
+export default function UploadLayout({ children }) {
   return (
     <section>
       <MainNav />
