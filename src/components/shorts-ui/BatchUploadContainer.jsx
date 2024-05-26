@@ -6,7 +6,7 @@ const BatchUploadContainer = () => {
   return (
     <div className="pt-[3rem]">
       <div className="text-right">
-        <Button className="mb-7">
+        <Button className="mb-7 px-7">
           {" "}
           <Upload size={"17px"} className="mr-2" /> Upload{" "}
         </Button>

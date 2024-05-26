@@ -107,3 +107,7 @@
 .user-details-card {
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.04);
 }
+
+.custom-box-shadow {
+  box-shadow: 0px 0px 20px 0px #0000000d;
+}

@@ -1,3 +1,4 @@
+import VideoForm from "@/components/shorts-ui/VideoForm";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { MoveLeft } from "lucide-react";
@@ -36,6 +37,10 @@ const PublishPage = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="max-w-[85%] mx-auto">
+        <VideoForm />
       </div>
     </>
   );
