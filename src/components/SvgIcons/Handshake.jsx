@@ -12,7 +12,7 @@ const Handshake = () => {
         cy="16"
         r="15.6923"
         stroke="#347DFD"
-        stroke-width="0.615385"
+        strokeWidth="0.615385"
       />
       <rect
         x="3.69238"
