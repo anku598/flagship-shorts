@@ -12,7 +12,7 @@ export const SettingsNav = () => {
         </Link>
         <Link
           href="/users"
-          className={pathname === "/users" ? "active-bottom" : ""}
+          className={pathname.startsWith("/users") ? "active-bottom" : ""}
         >
           Users
         </Link>

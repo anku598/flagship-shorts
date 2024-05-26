@@ -15,6 +15,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { DialogTrigger } from "@radix-ui/react-dialog";
+import Link from "next/link";
 import { useState } from "react";
 import { EditIcon } from "../SvgIcons/EditIcon";
 import { MoreVerticalEditIcon } from "../SvgIcons/MoreVerticalEditIcon";
@@ -25,7 +26,10 @@ export const UserListItem = () => {
   const [open, setIsOpen] = useState(false);
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
   return (
-    <div className="flex justify-between mt-7 pb-4 border-b-[1px]">
+    <Link
+      href={"/users/4564"}
+      className="flex justify-between mt-7 pb-4 border-b-[1px]"
+    >
       <div className="flex items-center gap-[10rem]">
         <div className="flex gap-3 items-center">
           <img
@@ -103,6 +107,6 @@ export const UserListItem = () => {
           </Dialog>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };

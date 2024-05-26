@@ -1,5 +1,7 @@
 import { TopHeader } from "@/components/shorts-ui/Navigation/TopHeader";
 
+import "../globals.css";
+
 export default function ChannelLayout({ children }) {
   return (
     <section>

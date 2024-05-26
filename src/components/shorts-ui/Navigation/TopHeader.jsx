@@ -13,7 +13,7 @@ export const TopHeader = () => {
         </Link>
       </Button>
 
-      <Button>
+      <Button className="px-10">
         <Link size="lg" href={"/"}>
           Update
         </Link>
