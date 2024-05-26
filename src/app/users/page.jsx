@@ -1,13 +1,12 @@
 import AddIcon from "@/components/SvgIcons/AddIcon";
-import { ChannelSingleList } from "@/components/shorts-ui/ChannelSingleList";
 import { SettingsNav } from "@/components/shorts-ui/Navigation/SettingsNav";
+import { UserListItem } from "@/components/shorts-ui/UserListItem";
 import { Button } from "@/components/ui/button";
-
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 import Link from "next/link";
 
-export default function Home() {
+const UsersPage = () => {
   return (
     <div className="flex flex-col h-[calc(100vh-70px)] w-[85%] mx-auto">
       <SettingsNav />
@@ -25,14 +24,16 @@ export default function Home() {
             <div className="mr-2">
               <AddIcon />
             </div>
-            New Channel
+            New User
           </Link>
         </Button>
       </div>
 
-      <p className="text-[1.25rem] font-medium">All Channels</p>
-      <ChannelSingleList />
-      <ChannelSingleList />
+      <p className="text-[1.25rem] font-medium">All Users</p>
+      <UserListItem />
+      <UserListItem />
     </div>
   );
-}
+};
+
+export default UsersPage;
