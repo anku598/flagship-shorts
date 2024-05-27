@@ -1,22 +1,23 @@
+import CloseIcon from "@/components/SvgIcons/CloseIcon";
 import { Button } from "@/components/ui/button";
-import { MoveLeft } from "lucide-react";
 import Link from "next/link";
 
 export const TopHeader = () => {
   return (
-    <div className="top-header h-[70px] flex justify-between px-10 items-center  border-b-[1px] border-[#EBEFF7] mb-10">
+    <div className="top-header h-[80px] flex justify-between px-10 items-center  border-b-[1px] border-[#EBEFF7] mb-10">
       <Button variant="link">
         {" "}
         <Link href={"/"} className="flex gap-2 items-center">
-          <MoveLeft />
-          <p className="text-[1.125rem] font-medium">Back</p>
+          {/* <MoveLeft />
+          <p className="text-[1.125rem] font-medium">Back</p> */}
+          <div className="bg-[#EEF6FF] w-[56px] h-[56px] rounded-full flex items-center justify-center">
+            <CloseIcon />
+          </div>
         </Link>
       </Button>
 
-      <Button className="px-10">
-        <Link size="lg" href={"/"}>
-          Update
-        </Link>
+      <Button className="text-[18px] font-[400] leading-[22px] px-[60px]">
+        <Link href={"/"}>Create</Link>
       </Button>
     </div>
   );

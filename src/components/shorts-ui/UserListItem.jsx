@@ -28,26 +28,26 @@ export const UserListItem = () => {
   return (
     <Link
       href={"/users/4564"}
-      className="flex justify-between mt-7 pb-4 border-b-[1px]"
+      className="flex justify-between py-3 border-b-[1px]"
     >
-      <div className="flex items-center gap-[10rem]">
+      <div className="flex items-center gap-[8.75rem]">
         <div className="flex gap-3 items-center">
           <img
-            className="inline-block h-12 w-12 rounded-full ring-2 ring-white"
+            className="inline-block h-[48px] w-[48px] rounded-full ring-2 ring-white"
             src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
             alt=""
           />
-          <h4 className="text-[1.125rem] text-[#181A1E]">Stephan Louis</h4>
+          <h4 className="text-[18px] text-[#181A1E]">Stephan Louis</h4>
         </div>
         <p className="text-[#181A1E]">stephan@grameenphone.com </p>
       </div>
 
       <div className="flex items-center gap-2">
-        <Button className="bg-transparent border-[1px] border-primary rounded-full text-[#181A1E] px-10 py-[1rem] h-[16px]">
+        <Button className="bg-transparent border-[1px] border-primary rounded-full text-[#181A1E] px-[12px] py-[4px] w-[120px] xl:max-3xl:h-[28px] 3xl:h-[32px]">
           Admin
         </Button>
 
-        <div className="ml-[1.5rem]">
+        <div className="ml-[1rem]">
           <Dialog open={open} onOpenChange={setIsOpen}>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>

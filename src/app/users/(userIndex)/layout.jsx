@@ -1,6 +1,5 @@
 import { ContainerLayoutWithSideNav } from "@/components/shorts-ui/ContainerLayoutWithSideNav";
-import "../globals.css";
 
-export default function HomeLayout({ children }) {
+export default function UsersLayout({ children }) {
   return <ContainerLayoutWithSideNav>{children}</ContainerLayoutWithSideNav>;
 }

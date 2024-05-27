@@ -13,10 +13,14 @@ module.exports = {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "3xl": "1700px",
       },
     },
     extend: {
+      screens: {
+        "3xl": "1700px",
+        "2k-screen": "2560px",
+      },
       boxShadow: {
         "3xl": "0px 0px 20px 0px rgba(0, 0, 0, 0.04",
       },

@@ -5,8 +5,8 @@ import { usePathname } from "next/navigation";
 export const SettingsNav = () => {
   const pathname = usePathname();
   return (
-    <div className=" mt-[3rem] mb-[1.75rem] w-[245px]">
-      <div className="flex pb-4 gap-[1.25rem] border-b-[1px] text-[#424854] tracking-[-0.15px]">
+    <div className="mt-[48px] mb-[1.75rem] xl:max-3xl:max-w-[254px] max-w-[318px]">
+      <div className="flex xl:pb-3 3xl:pb-4 xl:max-3xl:text-[16px] text-[20px] xl:max-3xl:leading-[22.4px] leading-[28px] justify-between gap-5 border-b-[1px] text-[#424854] tracking-[-0.15px]">
         <Link href="/" className={pathname === "/" ? "active-bottom" : ""}>
           Channels
         </Link>

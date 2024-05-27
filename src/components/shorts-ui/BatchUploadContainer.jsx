@@ -4,7 +4,7 @@ import BatchUploadCard from "./BatchUploadCard";
 
 const BatchUploadContainer = () => {
   return (
-    <div className="pt-[3rem]">
+    <div>
       <div className="text-right">
         <Button className="mb-7 px-7">
           {" "}

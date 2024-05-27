@@ -11,8 +11,8 @@ export const MainNav = () => {
   const isSettingsActive = pathname === "/" || "/users";
 
   return (
-    <div className="h-[70px] flex justify-between px-10 items-center  border-b-[1px] border-[#EBEFF7]">
-      <Link href={"/"} className="text-[1.25rem] text-body-color">
+    <div className="h-[80px] flex justify-between px-10 items-center  border-b-[1px] border-[#C3C7CF]">
+      <Link href={"/"} className="text-[1.5rem]  text-body-color">
         Flagship Innovation
       </Link>
 

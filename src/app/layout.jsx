@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className} suppressHydrationWarning={true}>
-        <main className="flex text-body-color pb-[5rem]">
+        <main className="flex text-body-color ">
           <div className=" w-full">{children}</div>
         </main>
       </body>
