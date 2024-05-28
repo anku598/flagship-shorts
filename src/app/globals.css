@@ -59,13 +59,27 @@
     @apply bg-background text-foreground;
   }
 
+  /* use this  Responsive font class font for from xl = 1280px up to 1920px screens  */
+  .font-18px {
+    @apply tracking-[-0.15px]   leading-[20px] xl:text-[0.94rem] 2xl:text-[1rem] 3xl:text-[1.125rem];
+  }
+  .font-20px {
+    @apply xl:text-[14px] 3xl:text-[1.25rem];
+  }
+
+  .font-24px {
+    @apply lg:max-3xl:text-[18px] 3xl:text-[1.5rem];
+  }
+
+  /* font class end here  */
+
   .page-container-with-sidebar {
     @apply flex flex-col h-[calc(100vh-80px)];
   }
 
   /* use this style for full container width (such as without sidebar ) */
   .container-full {
-    @apply max-w-[90%] lg:max-w-[800px] xl:max-w-[1200px] 3xl:max-w-[1500px] 2k-screen:max-w-[2000px] mx-auto;
+    @apply max-w-[90%] xl:max-w-[1000px] 2xl:max-w-[1200px] 3xl:max-w-[1500px] 2k-screen:max-w-[2000px] mx-auto;
   }
 
   .custom-input-style {
@@ -125,7 +139,7 @@
 }
 
 label {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
 }
 

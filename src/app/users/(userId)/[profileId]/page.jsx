@@ -20,7 +20,7 @@ const ProfileIdPage = () => {
         </Button>
       </div>
 
-      <div className="max-w-[78%] mx-auto">
+      <div className="container-full">
         <SettingsNav />
         <UserDetails />
       </div>

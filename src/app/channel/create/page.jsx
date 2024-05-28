@@ -2,21 +2,33 @@ import Handshake from "@/components/SvgIcons/Handshake";
 import { MoreVerticalEditIcon } from "@/components/SvgIcons/MoreVerticalEditIcon";
 import { MoveRightIcon } from "@/components/SvgIcons/MoveRightIcon";
 import InputSelect from "@/components/shorts-ui/InputSelect";
-import { MultiSelect } from "@/components/shorts-ui/MultiSelect";
+import MultiselectDropdown from "@/components/shorts-ui/MultiselectDropdown";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 import { Plus, PlusIcon, X } from "lucide-react";
 
+const options = [
+  "Option 1",
+  "Option 2",
+  "Option 3",
+  "options 4",
+  "Option 5",
+  "Option 6",
+  "Option 7",
+  "Option 8",
+  ,
+];
+
 const ChannelCreatePage = async () => {
   return (
     <div>
-      <div className="container-full flex-col lg:flex-row flex xl:gap-[4rem] 3xl:gap-[5rem] min-h-[calc(100vh-80px)] pb-[4rem]">
+      <div className="container-full flex-col lg:flex-row flex lg:gap-[4rem] 3xl:gap-[5rem] min-h-[calc(100vh-80px)] pb-[4rem]">
         <div className="file-upload flex flex-col items-center lg:flex-1">
           <input type="file" name="file" id="file" className="inputfile" />
           <label
             htmlFor="file"
-            className="flex items-center justify-center w-[100px]  xl:w-[240px] h-[100px] xl:h-[240px] bg-[#EAEBEC] rounded-full cursor-pointer"
+            className="flex items-center justify-center w-[150px]  3xl:w-[240px] h-[150px] 3xl:h-[240px] bg-[#EAEBEC] rounded-full cursor-pointer"
           >
             <Plus />
             <img
@@ -32,14 +44,14 @@ const ChannelCreatePage = async () => {
         <div className="w-full">
           <form>
             <div className="mb-[1.5rem]">
-              <label htmlFor="name" className=" mb-3 block">
+              <label htmlFor="name" className="mb-3 block ">
                 Name*
               </label>
               <input type="text" name="name" className=" custom-input-style" />
             </div>
 
             <div className="mb-[1.5rem]">
-              <label htmlFor="name" className="mb-3 block">
+              <label htmlFor="name" className="mb-3 block ">
                 Description*
               </label>
               <textarea
@@ -50,24 +62,27 @@ const ChannelCreatePage = async () => {
             </div>
 
             <div className="mb-[4rem]">
-              <label htmlFor="Users" className="mb-3 block">
+              <label htmlFor="Users" className="mb-3 block ">
                 Users*
               </label>
               <div className="w-full relative flex justify-between items-center custom-input-style h-[3.5rem] px-[1.2rem]">
                 {/* <p>No User Yet</p> */}
 
                 <div className="flex items-center gap-3">
-                  <div className="selected-user rounded-full min-w-[300px] bg-[#EEF6FF] flex justify-between items-center px-4 py-2">
+                  <div className="selected-user rounded-full min-w-[270px] 2xl:min-w-[270px] 3xl:min-w-[300px] bg-[#EEF6FF] flex justify-between items-center px-4 py-2">
                     <div className="flex items-center gap-2">
                       <img
                         className="inline-block h-[20px] w-[20px] rounded-full"
                         src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                         alt=""
                       />
-                      <div className="user-name text-[1rem] font-bold capitalize">
+                      <div className="user-name text-[14px] 2xl:text-[15px] 3xl:text-[1rem] font-bold capitalize">
                         Stephen Louis .
                       </div>
-                      <div className="role-name"> Publisher</div>
+                      <div className="role-name text-[14px] 2xl:text-[15px] 3xl:text-[1rem]">
+                        {" "}
+                        Publisher
+                      </div>
                     </div>
                     <div className="cursor-pointer">
                       <MoreVerticalEditIcon />
@@ -139,27 +154,27 @@ const ChannelCreatePage = async () => {
             </div>
 
             <div>
-              <p className=" font-medium text-[1.25rem] mb-5">
+              <p className=" font-medium font-20px xl:max-2xl:text-[1.125rem] mb-5">
                 Pre-defiined metadata for all shorts
               </p>
             </div>
 
-            <div className="mb-[1.5rem]">
-              <label htmlFor="category" className="mb-4 block">
+            <div className="mb-[1.5rem] w-[50%]">
+              <label htmlFor="category" className="mb-4  block">
                 Category
               </label>
-              <MultiSelect />
+              <MultiselectDropdown options={options} />
             </div>
 
             <div className="mb-[1.5rem]">
-              <label htmlFor="title" className="mb-4 block font-medium">
+              <label htmlFor="title" className="mb-4 block  font-medium">
                 Title
               </label>
               <input type="text" name="title" className=" custom-input-style" />
             </div>
 
             <div className="mb-[1.5rem]">
-              <label htmlFor="name" className="mb-4 block font-medium">
+              <label htmlFor="name" className="mb-4 block  font-medium">
                 Caption
               </label>
               <textarea
@@ -170,7 +185,7 @@ const ChannelCreatePage = async () => {
             </div>
 
             <div>
-              <p className="mb-[1.25rem] font-medium">CTA Button</p>
+              <p className="mb-[1.25rem] font-medium ">CTA Button</p>
               <input
                 type="text"
                 name="name"

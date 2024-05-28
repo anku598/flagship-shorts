@@ -10,8 +10,10 @@ export const TopHeader = () => {
         <Link href={"/"} className="flex gap-2 items-center">
           {/* <MoveLeft />
           <p className="text-[1.125rem] font-medium">Back</p> */}
-          <div className="bg-[#EEF6FF] w-[56px] h-[56px] rounded-full flex items-center justify-center">
-            <CloseIcon />
+          <div className="bg-[#EEF6FF] w-[40px] h-[40px] 3xl:w-[56px] 3xl:h-[56px] rounded-full flex items-center justify-center">
+            <div className=" w-[13px] h-[13px] 3xl:w-[16px] 3xl:h-[16px]">
+              <CloseIcon />
+            </div>
           </div>
         </Link>
       </Button>
