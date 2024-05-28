@@ -14,7 +14,7 @@ export default function Home() {
       <div className="relative flex gap-4 mb-[2.25rem] ">
         <SearchBarComponent />
         <Button
-          className="rounded-full xl:max-3xl:text-[18px] 3xl:text-[20px] font-[500] leading-[24.2px] px-[40px]"
+          className="rounded-full lg:max-3xl:text-[16px] 3xl:text-[20px] font-[500] 3xl:leading-[24.2px] xl:px-[30px] px-[40px] lg:h-[47px] 3xl:h-[56px] 3xl:py-[8px]"
           asChild
         >
           <Link href="/channel/create">
@@ -26,7 +26,7 @@ export default function Home() {
         </Button>
       </div>
 
-      <p className="text-[1.25rem] font-[500] leading-[24.2px] mb-3 capitalize text-body-color">
+      <p className="xl:text-[16px] 2xl:text-[1.1rem] text-[1.25rem] font-[500] leading-[24.2px] xl:mb-2 mb-3 capitalize text-body-color">
         All Channels
       </p>
       <ChannelSingleList />

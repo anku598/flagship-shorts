@@ -16,7 +16,7 @@ const UsersPage = () => {
 
         <Dialog>
           <DialogTrigger asChild>
-            <Button className="rounded-full text-[20px] px-[40px] font-[500] leading-[24.2px]">
+            <Button className="rounded-full lg:max-3xl:text-[16px] 3xl:text-[20px] font-[500] 3xl:leading-[24.2px] xl:px-[30px] px-[40px] lg:h-[47px] 3xl:h-[56px] ">
               <div className="mr-[14px]">
                 <AddIcon />
               </div>

@@ -28,22 +28,24 @@ export const UserListItem = () => {
   return (
     <Link
       href={"/users/4564"}
-      className="flex justify-between py-3 border-b-[1px]"
+      className="flex justify-between py-2 xl:py-3 3xl:py-4 border-b-[1px]"
     >
       <div className="flex items-center gap-[8.75rem]">
         <div className="flex gap-3 items-center">
           <img
-            className="inline-block h-[48px] w-[48px] rounded-full ring-2 ring-white"
+            className="inline-block xl:h-10 xl:w-10 3xl:h-12 h-10 w-10 3xl:w-12 rounded-full ring-2 ring-white"
             src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
             alt=""
           />
-          <h4 className="text-[18px] text-[#181A1E]">Stephan Louis</h4>
+          <h4 className="font-18px text-[#181A1E]">Stephan Louis</h4>
         </div>
-        <p className="text-[#181A1E]">stephan@grameenphone.com </p>
+        <p className="text-[#181A1E] xl:text-[14px] 3xl:text-[16px]">
+          stephan@grameenphone.com{" "}
+        </p>
       </div>
 
       <div className="flex items-center gap-2">
-        <Button className="bg-transparent border-[1px] border-primary rounded-full text-[#181A1E] px-[12px] py-[4px] w-[120px] xl:max-3xl:h-[28px] 3xl:h-[32px]">
+        <Button className="bg-transparent border-[1px] border-primary rounded-full text-[#181A1E] px-[12px] py-[4px] w-[120px] lg:max-3xl:h-[28px] 3xl:h-[32px]">
           Admin
         </Button>
 
@@ -62,15 +64,15 @@ export const UserListItem = () => {
                 className="
               "
               >
-                <DropdownMenuItem className="cursor-pointer pr-20">
-                  <div className=" mr-4">
+                <DropdownMenuItem className="cursor-pointer">
+                  <div className="mr-3 3xl:mr-[4] w-3 3xl:w-[18px]">
                     <EditIcon />
                   </div>
                   Edit
                 </DropdownMenuItem>
                 <DropdownMenuItem onSelect={() => setShowDeleteDialog(true)}>
-                  <DialogTrigger className=" flex items-center cursor-pointer pr-20">
-                    <div className=" mr-4">
+                  <DialogTrigger className=" flex items-center cursor-pointer">
+                    <div className=" mr-3 3xl:mr-[4] w-3 3xl:w-[18px]">
                       <TrashIcon />
                     </div>
                     Delete
