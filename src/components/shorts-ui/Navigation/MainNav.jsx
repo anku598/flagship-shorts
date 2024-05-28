@@ -1,4 +1,5 @@
 "use client";
+import DisplayScreenSize from "@/components/DisplayScreenSize";
 import { NotificationIcon } from "@/components/SvgIcons/NotificationIcon";
 import { SettingIcon } from "@/components/SvgIcons/SettingIcon";
 import { UserIcons } from "@/components/SvgIcons/UserIcons";
@@ -11,10 +12,12 @@ export const MainNav = () => {
   const isSettingsActive = pathname === "/" || "/users";
 
   return (
-    <div className="h-[70px] flex justify-between px-10 items-center  border-b-[1px] border-[#EBEFF7]">
-      <Link href={"/"} className="text-[1.25rem] text-body-color">
+    <div className="h-[80px] flex justify-between px-10 items-center  border-b-[1px] border-[#C3C7CF]">
+      <Link href={"/"} className="text-[1.5rem]  text-body-color">
         Flagship Innovation
       </Link>
+
+      <DisplayScreenSize />
 
       <div className="flex items-center gap-[1.25rem]">
         <Link href={"/"} className=" cursor-pointer">

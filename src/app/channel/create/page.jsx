@@ -11,12 +11,12 @@ import { Plus, PlusIcon, X } from "lucide-react";
 const ChannelCreatePage = async () => {
   return (
     <div>
-      <div className="w-[85%] mx-auto flex-col lg:flex-row flex lg:gap-[7.5rem] min-h-[calc(100vh-70px)] pb-[4rem]">
+      <div className="container-full flex-col lg:flex-row flex xl:gap-[4rem] 3xl:gap-[5rem] min-h-[calc(100vh-80px)] pb-[4rem]">
         <div className="file-upload flex flex-col items-center lg:flex-1">
           <input type="file" name="file" id="file" className="inputfile" />
           <label
             htmlFor="file"
-            className="flex items-center justify-center w-[100px] lg:w-[200px] h-[100px] lg:h-[200px] bg-[#EEF6FF] rounded-full cursor-pointer"
+            className="flex items-center justify-center w-[100px]  xl:w-[240px] h-[100px] xl:h-[240px] bg-[#EAEBEC] rounded-full cursor-pointer"
           >
             <Plus />
             <img
@@ -32,14 +32,14 @@ const ChannelCreatePage = async () => {
         <div className="w-full">
           <form>
             <div className="mb-[1.5rem]">
-              <label htmlFor="name" className="mb-4 block">
+              <label htmlFor="name" className=" mb-3 block">
                 Name*
               </label>
               <input type="text" name="name" className=" custom-input-style" />
             </div>
 
             <div className="mb-[1.5rem]">
-              <label htmlFor="name" className="mb-4 block">
+              <label htmlFor="name" className="mb-3 block">
                 Description*
               </label>
               <textarea
@@ -174,9 +174,15 @@ const ChannelCreatePage = async () => {
               <input
                 type="text"
                 name="name"
-                className=" custom-input-style mb-[1.25rem]"
+                placeholder="Button Label"
+                className="custom-input-style mb-[1.25rem]"
               />
-              <input type="text" name="name" className=" custom-input-style" />
+              <input
+                placeholder="Button URL"
+                type="text"
+                name="name"
+                className=" custom-input-style"
+              />
             </div>
           </form>
         </div>

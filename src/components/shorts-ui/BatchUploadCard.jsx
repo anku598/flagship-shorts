@@ -27,14 +27,17 @@ const BatchUploadCard = () => {
         <Button
           className="rounded-full border-[1px] border-[#EAEBEC]"
           variant="link"
+          asChild
         >
-          {progress === 100 && (
-            <div className="rounded-full mr-2 bg-primary w-8 h-8 flex items-center justify-center text-white text-[10px]">
-              100
-            </div>
-          )}
-          <div className="mr-[1.25rem]">Ready to publish</div>
-          <CircleClose className="" />
+          <Link href={"upload/6557/publish"}>
+            {progress === 100 && (
+              <div className="rounded-full mr-2 bg-primary w-8 h-8 flex items-center justify-center text-white text-[10px]">
+                100
+              </div>
+            )}
+            <div className="mr-[1.25rem]">Ready to publish</div>
+            <CircleClose className="" />
+          </Link>
         </Button>
         <Progress
           className="absolute bottom-0 left-0 h-[5px] bg-[#CBD5E8]"

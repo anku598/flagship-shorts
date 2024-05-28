@@ -28,14 +28,16 @@ export const ChannelSingleList = () => {
   const [open, setIsOpen] = useState(false);
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
   return (
-    <div className="flex justify-between mt-7 pb-4 border-b-[1px]">
+    <div className="flex justify-between py-4 border-b-[1px]">
       <div className="flex items-center gap-3">
         <img
-          className="inline-block h-12 w-12 rounded-full ring-2 ring-white"
+          className="inline-block  h-12 w-12 rounded-full ring-2 ring-white"
           src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
           alt=""
         />
-        <h4 className="text-[1.5rem]">Grameenphone</h4>
+        <h4 className="xl:max-3xl:text-[22px] 3xl:text-[1.5rem]">
+          Grameenphone
+        </h4>
       </div>
 
       <div className="flex items-center gap-4">
@@ -53,7 +55,7 @@ export const ChannelSingleList = () => {
           <p>0 Followers</p>
         </div>
 
-        <div className="ml-[4.5rem]">
+        <div className="ml-[83px]">
           <Dialog open={open} onOpenChange={setIsOpen}>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
