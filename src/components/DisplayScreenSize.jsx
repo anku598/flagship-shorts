@@ -29,8 +29,8 @@ const DisplayScreenSize = () => {
 
   return (
     <div>
-      <h3>Current screen width: {windowSize.width}px</h3>
-      <h3>Current screen height: {windowSize.height}px</h3>
+      <p> {windowSize.width}px</p>
+      {/* <h3>Current screen height: {windowSize.height}px</h3> */}
     </div>
   );
 };
