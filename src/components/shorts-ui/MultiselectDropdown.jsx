@@ -82,7 +82,7 @@ const MultiselectDropdown = ({ options }) => {
           dropdownOpen ? "scale-100" : "scale-95 opacity-0 pointer-events-none"
         }`}
       >
-        <ScrollArea className="h-[300px] px-[2rem]">
+        <ScrollArea className="xl:h-[250px] 2xl:h-[300px] 3x:h-[473px] px-[1rem] 3xl:px-[2rem]">
           <div>
             {options.map((option) => (
               <div

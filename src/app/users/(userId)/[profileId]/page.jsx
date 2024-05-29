@@ -12,10 +12,7 @@ const ProfileIdPage = () => {
           <X size={"17px"} />
         </div>
 
-        <Button
-          className="rounded-full px-10 text-[1.125rem] font-[400] "
-          asChild
-        >
+        <Button asChild>
           <Link href={"/users"}>Update</Link>
         </Button>
       </div>

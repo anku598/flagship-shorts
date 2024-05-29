@@ -6,7 +6,7 @@ import { Button } from "../ui/button";
 import { Progress } from "../ui/progress";
 
 const BatchUploadCard = () => {
-  const [progress, setProgress] = useState(30);
+  const [progress, setProgress] = useState(100);
 
   return (
     <div className="mb-4">
@@ -24,14 +24,10 @@ const BatchUploadCard = () => {
           </div>
         </div>
 
-        <Button
-          className="rounded-full border-[1px] border-[#EAEBEC]"
-          variant="link"
-          asChild
-        >
+        <Button className="" variant="dropdown" size="dropdown" asChild>
           <Link href={"upload/6557/publish"}>
             {progress === 100 && (
-              <div className="rounded-full mr-2 bg-primary w-8 h-8 flex items-center justify-center text-white text-[10px]">
+              <div className="rounded-full mr-2 bg-primary w-6 h-6 flex items-center justify-center text-[9px] text-white">
                 100
               </div>
             )}
@@ -45,7 +41,7 @@ const BatchUploadCard = () => {
         />
       </Link>
 
-      <div className="flex mt-3 text-[#424854] text-[15px] justify-between items-center px-1">
+      <div className="flex mt-2 2xl:mt-2 text-[#424854] text-[13px] xl:text-[15px] justify-between items-center px-1">
         <p className="">0 out 1 uploaded</p>
         <p className="">30MB/100MB - 100Mb remaining</p>
       </div>

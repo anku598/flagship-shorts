@@ -1,5 +1,4 @@
 "use client";
-import DisplayScreenSize from "@/components/DisplayScreenSize";
 import { NotificationIcon } from "@/components/SvgIcons/NotificationIcon";
 import { SettingIcon } from "@/components/SvgIcons/SettingIcon";
 import { UserIcons } from "@/components/SvgIcons/UserIcons";
@@ -8,8 +7,7 @@ import { usePathname } from "next/navigation";
 
 export const MainNav = () => {
   const pathname = usePathname();
-  console.log(pathname);
-  const isSettingsActive = pathname === "/" || "/users";
+  const isSettingsActive = pathname === "/" || pathname === "/users";
 
   return (
     <div className="h-[80px] flex justify-between px-10 items-center  border-b-[1px] border-[#C3C7CF]">
@@ -17,7 +15,7 @@ export const MainNav = () => {
         Flagship Innovation
       </Link>
 
-      <DisplayScreenSize />
+      {/* <DisplayScreenSize /> */}
 
       <div className="flex items-center gap-[1.25rem]">
         <Link href={"/"} className=" cursor-pointer">
