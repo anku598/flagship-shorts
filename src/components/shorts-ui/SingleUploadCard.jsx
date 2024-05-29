@@ -11,17 +11,21 @@ const SingleUploadCard = ({ progress, cancel }) => {
     <>
       <Link
         href={"/upload/123/publish"}
-        className="flex relative justify-between px-4 h-[76px] border-[1px]  border-[#EAEBEC] border-l-0 border-r-0 items-center"
+        className="flex relative mb-4 justify-between px-[27.5px] xl:py-[22px] 3xl:py-[30px] border-[1px] rounded-[24px] border-[#EAEBEC] items-center overflow-hidden"
       >
-        <div className="flex items-center flex-1 gap-2">
+        <div className="flex items-center flex-1 w-56 gap-2">
           <PlaySquare />
           <div className="font-medium">
-            <p>video #73192398309480-34-0</p>
+            <p className="text-[15px] 3xl:text-[16px]">
+              video #73192398309480-34-0
+            </p>
           </div>
         </div>
-        <div className="size-info mr-[5rem]">33.4MB</div>
+        <div className="text-[15px] flex-none w-48 3xl:text-[16px] ">
+          33.4MB
+        </div>
         <div
-          className={clsx("mr-[6rem] text-[16px]", {
+          className={clsx(" flex-none w-48 text-[15px] 3xl:text-[16px]", {
             "text-[#DF1b27]": cancel,
             "text-[#181A1E]": !cancel,
           })}
@@ -40,12 +44,12 @@ const SingleUploadCard = ({ progress, cancel }) => {
         ) : null}
       </Link>
 
-      {progress !== 100 ? (
-        <div className="flex mt-2 mb-8 text-[#424854] text-[15px] justify-between items-center px-1">
+      {/* {progress !== 100 ? (
+        <div className="flex mt-2 mb-8 text-[#424854] text-[14px] 3xl:text-[16px] justify-between items-center px-1">
           <p className="">0 / 1 uploaded</p>
           <p className="">6GB/25GB - 19Gb remaining</p>
         </div>
-      ) : null}
+      ) : null} */}
     </>
   );
 };

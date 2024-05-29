@@ -7,23 +7,23 @@ import { useState } from "react";
 import VideoPlayerIcon from "../SvgIcons/VideoPlayerIcon";
 import MultiselectDropdown from "./MultiselectDropdown";
 
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Search } from "lucide-react";
 import { TrashIcon } from "../SvgIcons/TrashIcon";
-import { Input } from "../ui/input";
+import SelectDropDownContent from "./SelectDropDownContent";
 import TagTextarea from "./TagTextarea";
 
 const VideoForm = () => {
   const [showControls, setShowControls] = useState(true);
   const [showThumbnail, setShowThumbnail] = useState(true);
 
-  const options = ["Option 1", "Option 2", "Option 3", "Option 4"];
+  const options = [
+    "Option 1",
+    "Option 2",
+    "Option 3",
+    "Option 4",
+    "Option 5",
+    "Option 6",
+    "Option 7",
+  ];
 
   const handlePlayClick = () => {
     setShowControls(false);
@@ -32,8 +32,8 @@ const VideoForm = () => {
     video.play();
   };
   return (
-    <div className="video-form-container flex gap-[10rem]">
-      <div className="basis-[15%] relative">
+    <div className="video-form-container flex xl:gap-[4.5rem] 2xl:gap-[5rem] 3xl:gap-[7.5rem]">
+      <div className="w-[240px]  relative">
         <p className="mb-2">Video 1.mp4</p>
         <AspectRatio ratio={9 / 16}>
           {showThumbnail && (
@@ -44,7 +44,7 @@ const VideoForm = () => {
                 className="absolute inset-0 w-full h-full object-cover rounded-[8px]"
               />
               <div
-                className="absolute inset-0 flex items-center justify-center cursor-pointer"
+                className="absolute inset-0 flex top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] items-center justify-center cursor-pointer xl:w-[25px] xl:h-[25px] 3xl:w-[35px] 3xl:h-[50px]"
                 onClick={handlePlayClick}
               >
                 <VideoPlayerIcon />
@@ -95,7 +95,7 @@ const VideoForm = () => {
         </div>
       </div>
 
-      <form className="basis-[85%] mb-4">
+      <form className=" w-full mb-4">
         <div className="flex gap-3 mb-[1.5rem]">
           <div className="w-full">
             <label htmlFor="category" className="mb-4 block font-medium  ">
@@ -104,56 +104,10 @@ const VideoForm = () => {
             <MultiselectDropdown options={options} className="h-[48px]" />
           </div>
           <div className="w-full">
-            <label htmlFor="category" className="mb-4 block font-medium  ">
-              Channel*
+            <label htmlFor="channel" className="mb-4 block font-medium  ">
+              Select Channel*
             </label>
-            <Select>
-              <SelectTrigger className="w-full rounded-full h-[48px] border-[#C3C7CF] text-[#9E9E9E]">
-                <SelectValue className="" placeholder="Select Channel" />
-              </SelectTrigger>
-              <SelectContent className="custom-box-shadow  px-[1.2rem] py-[1rem]">
-                <div className="relative flex gap-4 mb-[1rem]">
-                  <Search className="absolute left-2.5 top-[50%] translate-y-[-50%] h-4 w-4 text-muted-foreground" />
-                  <Input
-                    type="search"
-                    placeholder="Search"
-                    className="w-full rounded-full bg-background pl-8"
-                  />
-                </div>
-                <SelectItem value="value">
-                  <div className="flex items-center gap-2">
-                    <img
-                      src="https://images.unsplash.com/photo-1558383745-6274e5c505c5?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                      alt=""
-                      className="w-[30px] h-[30px] rounded-full"
-                    />
-                    <div>Chorki</div>
-                  </div>
-                </SelectItem>
-
-                <SelectItem value="value1">
-                  <div className="flex items-center gap-2">
-                    <img
-                      src="https://images.unsplash.com/photo-1558383745-6274e5c505c5?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                      alt=""
-                      className="w-[30px] h-[30px] rounded-full"
-                    />
-                    <div>Chorki</div>
-                  </div>
-                </SelectItem>
-
-                <SelectItem value="value2">
-                  <div className="flex items-center gap-2">
-                    <img
-                      src="https://images.unsplash.com/photo-1558383745-6274e5c505c5?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                      alt=""
-                      className="w-[30px] h-[30px] rounded-full"
-                    />
-                    <div>Bioscope</div>
-                  </div>
-                </SelectItem>
-              </SelectContent>
-            </Select>
+            <SelectDropDownContent options={options} className="h-[48px]" />
           </div>
         </div>
 
@@ -212,8 +166,10 @@ const VideoForm = () => {
             </div>
           </div>
 
-          <div className="border flex justify-center items-center cursor-pointer border-[#C3C7CF] rounded-full w-[40px] h-[40px]">
-            <TrashIcon />
+          <div className="border border-[#C3C7CF] w-[27px] h-[27px] 3xl:w-[40px] 3xl:h-[40px] rounded-full flex items-center justify-center">
+            <div className=" w-[13px] h-[13px] 3xl:w-[16px] 3xl:h-[16px]">
+              <TrashIcon />
+            </div>
           </div>
         </div>
       </form>

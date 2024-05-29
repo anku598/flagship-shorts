@@ -6,7 +6,7 @@ export default function BatchIdLayout({ children }) {
     <section>
       <main className="flex flex-col text-body-color">
         <TopHeaderForVideoPublish />
-        <div className=" pt-[3rem] w-full">{children}</div>
+        <div className="w-full">{children}</div>
       </main>
     </section>
   );

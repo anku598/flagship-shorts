@@ -1,5 +1,7 @@
-import { ContainerLayoutWithSideNav } from "@/components/shorts-ui/ContainerLayoutWithSideNav";
+import { ContainerFullLayoutWithSideNav } from "@/components/shorts-ui/ContainerFullLayoutWithSideNav";
 
 export default function UploadLayout({ children }) {
-  return <ContainerLayoutWithSideNav>{children}</ContainerLayoutWithSideNav>;
+  return (
+    <ContainerFullLayoutWithSideNav>{children}</ContainerFullLayoutWithSideNav>
+  );
 }

@@ -18,7 +18,7 @@ export const TopHeader = () => {
         </Link>
       </Button>
 
-      <Button className="text-[18px] font-[400] leading-[22px] px-[60px]">
+      <Button className="">
         <Link href={"/"}>Create</Link>
       </Button>
     </div>

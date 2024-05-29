@@ -15,19 +15,21 @@ const BatchVideoItem = () => {
   const [progress, setProgress] = useState(30);
   const [cancel, setCancel] = useState(false);
   return (
-    <div className="max-w-[85%] mx-auto">
-      <h2 className="text-[2rem] text-[#181A1E] font-medium capitalize tracking-[-0.15px] mb-[2.4rem]">
+    <div className="container-full">
+      <h2 className="text-[1.35rem] 2xl:text-[1.5rem] 3xl:text-[2rem] text-[#181A1E] font-medium capitalize tracking-[-0.15px] xl:mb-[25px] 3xl:mb-[40px] ">
         Batch #73192398309480-34-0
       </h2>
       <div className="mb-[1.5rem] text-right">
         <DropdownMenu>
           <DropdownMenuTrigger>
             <Button
-              className="text-[#181A1E] focus-visible:ring ring-0 bg-transparent border-[1px]"
+              variant="dropdown"
+              size="dropdown"
+              className="min-w-[100px] xl:min-w-[80px] 3xl:min-w-[75px] text-[14px] 3xl:text-[16px] py-[8px] bg-[#EEF6FF] border-0"
               asChild
             >
               <div className="">
-                All <ChevronDown size={"20px"} className="ml-1" />{" "}
+                All <ChevronDown size={"18px"} className="ml-1" />{" "}
               </div>
             </Button>
           </DropdownMenuTrigger>

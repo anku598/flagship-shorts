@@ -11,7 +11,7 @@ const UploadPage = () => {
     setIsBatchUpload(true);
   };
   return (
-    <div className="page-container-with-sidebar pt-[48px]">
+    <div className="page-container-with-sidebar">
       {isBatchUpload ? (
         <div className="">
           <BatchUploadContainer />

@@ -9,7 +9,8 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground",
+        default:
+          "bg-primary text-primary-foreground tracking-[-0.15px] leading-[20px] xl:text-[0.94rem] 2xl:text-[1rem] 3xl:text-[1.125rem] font-[400]",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
@@ -18,13 +19,17 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-[#181A1E] underline-offset-4 ",
+        dropdown:
+          "bg-transparent text-[#181A1E] text-[13px] 2xl:text-[14px] 3xl:text-[16px] border-[1px] border-[#EAEBEC] rounded-[24px] min-w-[130px] 3xl:min-w-[164px] justify-between flex items-center",
       },
       size: {
-        default: " h-[40px] px-[20px] py-[5px] 3xl:py-[16px] rounded-full",
-        sm: "h-9 rounded-md px-3",
+        default:
+          "px-[34px] 3xl:px-[51px] py-[12px] 3xl:py-[20px] 3xl:py-[17px] rounded-[60px] 3xl:rounded-[100px]",
+        sm: "px-[27px] 3xl:px-[40px] py-[12px] 3xl:py-[16px] 3xl:py-[16px] rounded-[60px] 3xl:rounded-[100px]",
         lg: "h-11 rounded-full px-8",
         icon: "h-10 w-10",
         xs: "rounded-full h-8 px-3 py-1",
+        dropdown: "px-[16px] py-[12px]",
       },
     },
     defaultVariants: {

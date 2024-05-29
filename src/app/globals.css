@@ -61,7 +61,7 @@
 
   /* use this  Responsive font class font for from xl = 1280px up to 1920px screens  */
   .font-18px {
-    @apply tracking-[-0.15px]   leading-[20px] xl:text-[0.94rem] 2xl:text-[1rem] 3xl:text-[1.125rem];
+    @apply tracking-[-0.15px] leading-[20px] xl:text-[0.94rem] 2xl:text-[1rem] 3xl:text-[1.125rem];
   }
   .font-20px {
     @apply xl:text-[14px] 3xl:text-[1.25rem];
