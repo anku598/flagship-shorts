@@ -1,12 +1,11 @@
-import Handshake from "@/components/SvgIcons/Handshake";
-import { MoreVerticalEditIcon } from "@/components/SvgIcons/MoreVerticalEditIcon";
+import { Info } from "@/components/SvgIcons/Info";
 import { MoveRightIcon } from "@/components/SvgIcons/MoveRightIcon";
 import InputSelect from "@/components/shorts-ui/InputSelect";
 import MultiselectDropdown from "@/components/shorts-ui/MultiselectDropdown";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
-import { Plus, PlusIcon, X } from "lucide-react";
+import { MoreVerticalIcon, Plus, PlusIcon, X } from "lucide-react";
 
 const options = [
   "Option 1",
@@ -65,11 +64,11 @@ const ChannelCreatePage = async () => {
               <label htmlFor="Users" className="mb-3 block ">
                 Users*
               </label>
-              <div className="w-full relative flex justify-between items-center custom-input-style h-[3.5rem] px-[1.2rem]">
+              <div className="w-full relative flex justify-between items-center custom-input-style h-[3.5rem] px-[10px]">
                 {/* <p>No User Yet</p> */}
 
                 <div className="flex items-center gap-3">
-                  <div className="selected-user rounded-full min-w-[270px] 2xl:min-w-[270px] 3xl:min-w-[300px] bg-[#EEF6FF] flex justify-between items-center px-4 py-2">
+                  <div className="selected-user rounded-full min-w-[270px] 2xl:min-w-[270px] 3xl:min-w-[300px] bg-[#EEF6FF] flex justify-between items-center px-[12px] py-2">
                     <div className="flex items-center gap-2">
                       <img
                         className="inline-block h-[20px] w-[20px] rounded-full"
@@ -85,7 +84,8 @@ const ChannelCreatePage = async () => {
                       </div>
                     </div>
                     <div className="cursor-pointer">
-                      <MoreVerticalEditIcon />
+                      {/* <MoreVerticalEditIcon className="w-full" /> */}
+                      <MoreVerticalIcon size={"14px"} />
                     </div>
                   </div>
                 </div>
@@ -127,20 +127,16 @@ const ChannelCreatePage = async () => {
                     <InputSelect />
                     {/* <InputSelect />
                     <InputSelect /> */}
-                    <Button
-                      variant="link"
-                      className="text-primary items-start justify-start px-0"
-                    >
-                      <PlusIcon size={"17px"} />
+                    <div className="text-primary text-[16px] font-[500] flex items-center gap-1 px-0 cursor-pointer">
+                      <PlusIcon size={"16px"} />
                       Add User
-                    </Button>
+                    </div>
 
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
-                        <Handshake />
+                        <Info />
                         <p className="font-light">
-                          Lorem ipsum dolor sit amet consectetur. Mauris sapien
-                          mattis{" "}
+                          You can add new users to this channel from here
                         </p>
                       </div>
 
@@ -159,7 +155,7 @@ const ChannelCreatePage = async () => {
               </p>
             </div>
 
-            <div className="mb-[1.5rem] w-[50%]">
+            <div className="mb-[1.5rem] xl:w-[65%] 3xl:w-[50%]">
               <label htmlFor="category" className="mb-4  block">
                 Category
               </label>

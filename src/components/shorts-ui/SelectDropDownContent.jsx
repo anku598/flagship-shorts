@@ -34,10 +34,10 @@ const SelectDropDownContent = ({ options }) => {
   return (
     <div className="relative w-full" ref={dropdownRef}>
       <div
-        className="border border-[#C3C7CF] rounded-full min-h-[48px] p-2 px-4 cursor-pointer relative"
+        className="border border-[#C3C7CF] rounded-full min-h-[48px] p-2 px-4 cursor-pointer relative flex justify-between items-center"
         onClick={toggleDropdown}
       >
-        <div className="flex flex-wrap items-center justify-between gap-2 cursor-pointer">
+        <div className="flex flex-wrap items-center justify-between gap-2 cursor-pointer w-full">
           <div className="flex items-center flex-wrap gap-1">
             {selectedOption && (
               <div className="flex gap-2 items-center ">
@@ -59,7 +59,7 @@ const SelectDropDownContent = ({ options }) => {
             style={{ display: selectedOption ? "none" : "block" }}
             readOnly
           />
-          <div className="w-[14px]">
+          <div className="w-[16px]">
             <ChevronDown className="w-full transform transition-transform duration-200 ease-in-out" />
           </div>
         </div>

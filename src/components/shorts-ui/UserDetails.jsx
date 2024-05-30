@@ -136,6 +136,77 @@ const UserDetails = () => {
               </div>
             </div>
           </div>
+
+          <div className="flex justify-between py-3">
+            <div className="flex items-center gap-[10rem]">
+              <div className="flex gap-5 items-center">
+                <img
+                  className="inline-block  h-10 xl:h-10 xl:w-10 3xl:h-12 3xl:w-12 w-10 rounded-full ring-2 ring-white"
+                  src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt=""
+                />
+                <h4 className="font-24px text-[#181A1E] capitalize">
+                  Stephan Louis
+                </h4>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <div className="ml-[1.5rem]">
+                <Dialog open={open} onOpenChange={setIsOpen}>
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <div className="cursor-pointer">
+                        <Button variant="dropdown" size="dropdown">
+                          Publisher
+                          <ChevronDown size={"15px"} />
+                        </Button>
+                      </div>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end" className="rounded-[8px]">
+                      <DropdownMenuItem className="cursor-pointer flex items-center justify-between">
+                        <div>Publisher</div>
+                        <div className="w-[18px]">
+                          <CheckCircleBlueIcon />
+                        </div>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem className="cursor-pointer ">
+                        Moderator
+                      </DropdownMenuItem>
+                      <DropdownMenuItem className="cursor-pointer text-[#DF1B41]">
+                        <DialogTrigger className=" flex items-center cursor-pointer ">
+                          Revoke Access
+                        </DialogTrigger>
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+
+                  <DialogContent className="flex flex-col justify-center  rounded-[36px] items-center">
+                    <DialogHeader>
+                      <DialogTitle className="text-[1.25rem] font-medium mb-[1rem]">
+                        Are you sure you want to revoke access?
+                      </DialogTitle>
+                    </DialogHeader>
+                    <DialogFooter>
+                      <Button
+                        className="rounded-full px-10"
+                        variant="outline"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        Cancel
+                      </Button>
+                      <Button
+                        className="rounded-full px-10"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        Confirm
+                      </Button>
+                    </DialogFooter>
+                  </DialogContent>
+                </Dialog>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

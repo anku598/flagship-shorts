@@ -98,7 +98,7 @@
   &::before {
     position: absolute;
     content: "";
-    left: -24px;
+    left: -2px;
     width: 3px;
     height: 100%;
     background: #181a1e;

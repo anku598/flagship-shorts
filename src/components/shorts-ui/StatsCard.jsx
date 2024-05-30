@@ -26,15 +26,17 @@ export const StatsCard = ({ headerTitle, listItems, itemType }) => {
                   "border-b-[1px] border-b-[#EAEBEC] py-[12px]"
                 }`}
               >
-                <div className="flex items-center gap-[20px]">
+                <div className="flex items-center  gap-[20px]">
                   <img
-                    className="w-[45px] h-[80px] rounded-[4px]"
+                    className="xl:h-[65px] w-[45px] h-[80px] rounded-[4px]"
                     src="https://images.unsplash.com/photo-1558383745-6274e5c505c5?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="thumb Image"
                   />
 
                   <div className="">
-                    <div className="font-18px mb-[12px]">lorem ipsum</div>
+                    <div className="font-18px xl:mb-[8px] 3xl:mb-[12px]">
+                      lorem ipsum
+                    </div>
                     <div className="flex gap-[10px] items-center">
                       <img
                         className="inline-block w-[20px] h-[20px] rounded-full "

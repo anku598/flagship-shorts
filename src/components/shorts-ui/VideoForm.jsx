@@ -90,7 +90,7 @@ const VideoForm = () => {
           <img
             src="https://images.unsplash.com/photo-1558383745-6274e5c505c5?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
-            className="w-[48px] rounded-[3px]"
+            className="w-[48px] h-[72px] rounded-[3px]"
           />
         </div>
       </div>
@@ -133,7 +133,7 @@ const VideoForm = () => {
           <label htmlFor="name" className="mb-4 block font-medium">
             Tags
           </label>
-          <div className="border-[1px] border-[#C3C7CF] rounded-[1.25rem] py-3">
+          <div className="border-[1px] h-[140px] border-[#C3C7CF] rounded-[1.25rem] py-3">
             <TagTextarea />
           </div>
         </div>

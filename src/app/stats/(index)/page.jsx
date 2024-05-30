@@ -147,7 +147,7 @@ function StatsIndexPage() {
   return (
     <div>
       <StatsFilterBar />
-      <div className="flex gap-[40px]">
+      <div className="flex xl:flex-col 2xl:flex-row 3xl:flex-row gap-[40px]">
         <StatsCard
           headerTitle="Top Shorts"
           listItems={shortsItems}
