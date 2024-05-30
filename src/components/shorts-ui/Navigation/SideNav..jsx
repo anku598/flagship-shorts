@@ -18,7 +18,16 @@ export const SideNav = () => {
           <Link href="#" className="">
             Library
           </Link>
-          <Link href="/upload" className="">
+          <Link
+            href={{
+              pathname: "/stats",
+            }}
+            className={`${
+              pathname === "/stats"
+                ? "text-primary font-[500]"
+                : "text-[#181a1e]"
+            }`}
+          >
             Stats
           </Link>
           <Link

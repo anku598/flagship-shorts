@@ -105,6 +105,10 @@
   }
 }
 
+.card-shadow {
+  box-shadow: 0px 4px 25px 0px #181a1e0d;
+}
+
 .active-bottom {
   position: relative;
   font-weight: 500;

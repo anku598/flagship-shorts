@@ -13,16 +13,18 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 import CheckCircleBlueIcon from "../SvgIcons/CheckCircleBlueIcon";
+import { CommonDropdown } from "./CommonDropdown";
 
 const UserDetails = () => {
   const [open, setIsOpen] = useState(false);
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
+
+  const dropdownItems = ["All", "Completed", "In progress", "Error"];
   return (
     <>
       <div>
@@ -40,40 +42,12 @@ const UserDetails = () => {
               stephan@grameenphone.com
             </p>
 
-            <DropdownMenu>
-              <DropdownMenuTrigger>
-                <Button
-                  variant="dropdown"
-                  size="dropdown"
-                  className="xl:min-w-[140px]"
-                  asChild
-                >
-                  <div>
-                    <div>Channel User</div> <ChevronDown size={"16px"} />
-                  </div>
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent
-                align="start"
-                className=" cursor-pointer bg-white p-0 text-[#181A1E] capitalize"
-              >
-                <DropdownMenuItem className="cursor-pointer font-18px 3xl:text-[16px] ">
-                  All
-                </DropdownMenuItem>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem className="font-18px 3xl:text-[16px]">
-                  Completed
-                </DropdownMenuItem>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem className="font-18px 3xl:text-[16px]">
-                  In progress
-                </DropdownMenuItem>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem className="font-18px 3xl:text-[16px]">
-                  Error
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <CommonDropdown
+              triggerText="Channel User"
+              items={dropdownItems}
+              showIcon={false}
+              align="start"
+            />
           </div>
         </div>
 
@@ -82,7 +56,7 @@ const UserDetails = () => {
             <div className="font-20px font-[500]">
               Manage Stephen Louis roles
             </div>
-            <Button className="font-20px" size="sm">
+            <Button className="font-20px">
               <div className="mr-[14px]">
                 <AddIcon />
               </div>
