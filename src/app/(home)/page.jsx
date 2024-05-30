@@ -26,7 +26,7 @@ export default function Home() {
         </Button>
       </div>
 
-      <p className="xl:text-[16px] 2xl:text-[1.1rem] text-[1.25rem] font-[500] leading-[24.2px] xl:mb-2 mb-3 capitalize text-body-color">
+      <p className="font-20px font-[500] xl:mb-2 mb-3 capitalize text-body-color">
         All Channels
       </p>
       <ChannelSingleList />

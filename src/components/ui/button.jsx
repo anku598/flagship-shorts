@@ -24,12 +24,14 @@ const buttonVariants = cva(
       },
       size: {
         default:
-          "px-[34px] 3xl:px-[51px] py-[12px] 3xl:py-[20px] 3xl:py-[17px] rounded-[60px] 3xl:rounded-[100px]",
+          "px-[34px] 3xl:px-[36px] py-[12px] 3xl:py-[20px] 3xl:py-[17px] rounded-[60px] 3xl:rounded-[100px]",
         sm: "px-[27px] 3xl:px-[40px] py-[12px] 3xl:py-[16px] 3xl:py-[16px] rounded-[60px] 3xl:rounded-[100px]",
         lg: "h-11 rounded-full px-8",
         icon: "h-10 w-10",
         xs: "rounded-full h-8 px-3 py-1",
         dropdown: "px-[16px] py-[12px]",
+        secondary:
+          "px-[34px] 3xl:px-[48px] py-[12px] 3xl:py-[20px] 3xl:py-[17px] rounded-[60px] 3xl:rounded-[100px]",
       },
     },
     defaultVariants: {

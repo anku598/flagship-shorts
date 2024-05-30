@@ -44,7 +44,7 @@ const PublishPage = () => {
         </div>
       </div>
 
-      <div className="container-full">
+      <div className="container-full pb-[4rem]">
         <VideoForm />
       </div>
     </>

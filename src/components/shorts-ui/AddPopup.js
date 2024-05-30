@@ -1,10 +1,10 @@
 "use client";
-import Handshake from "@/components/SvgIcons/Handshake";
 import InputSelect from "@/components/shorts-ui/InputSelect";
 import { Button } from "@/components/ui/button";
 import { DialogContent } from "@/components/ui/dialog";
 import { PlusIcon, X } from "lucide-react";
 import { useState } from "react";
+import { Info } from "../SvgIcons/Info";
 
 const AddPopup = ({ isDefaultHeader }) => {
   const [selectedRole, setSelectedRole] = useState("admin");
@@ -85,20 +85,15 @@ const AddPopup = ({ isDefaultHeader }) => {
       <InputSelect role={selectedRole} />
       <InputSelect role={selectedRole} />
       <InputSelect role={selectedRole} />
-      <Button
-        variant="link"
-        className="text-primary items-start justify-start px-0"
-      >
-        <PlusIcon size={"17px"} />
+      <div className="text-primary text-[16px] font-[500] flex items-center gap-1 px-0 cursor-pointer">
+        <PlusIcon size={"16px"} />
         Add User
-      </Button>
+      </div>
 
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <Handshake />
-          <p className="font-light">
-            Lorem ipsum dolor sit amet consectetur. Mauris sapien mattis
-          </p>
+          <Info />
+          <p className="font-light">You can add new admin users from here</p>
         </div>
 
         <Button className="rounded-full" size="lg">

@@ -13,16 +13,18 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 import CheckCircleBlueIcon from "../SvgIcons/CheckCircleBlueIcon";
+import { CommonDropdown } from "./CommonDropdown";
 
 const UserDetails = () => {
   const [open, setIsOpen] = useState(false);
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
+
+  const dropdownItems = ["All", "Completed", "In progress", "Error"];
   return (
     <>
       <div>
@@ -40,40 +42,12 @@ const UserDetails = () => {
               stephan@grameenphone.com
             </p>
 
-            <DropdownMenu>
-              <DropdownMenuTrigger>
-                <Button
-                  variant="dropdown"
-                  size="dropdown"
-                  className="xl:min-w-[140px]"
-                  asChild
-                >
-                  <div>
-                    <div>Channel User</div> <ChevronDown size={"16px"} />
-                  </div>
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent
-                align="start"
-                className=" cursor-pointer bg-white p-0 text-[#181A1E] capitalize"
-              >
-                <DropdownMenuItem className="cursor-pointer font-18px 3xl:text-[16px] ">
-                  All
-                </DropdownMenuItem>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem className="font-18px 3xl:text-[16px]">
-                  Completed
-                </DropdownMenuItem>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem className="font-18px 3xl:text-[16px]">
-                  In progress
-                </DropdownMenuItem>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem className="font-18px 3xl:text-[16px]">
-                  Error
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <CommonDropdown
+              triggerText="Channel User"
+              items={dropdownItems}
+              showIcon={false}
+              align="start"
+            />
           </div>
         </div>
 
@@ -82,7 +56,7 @@ const UserDetails = () => {
             <div className="font-20px font-[500]">
               Manage Stephen Louis roles
             </div>
-            <Button className="font-20px" size="sm">
+            <Button className="font-20px">
               <div className="mr-[14px]">
                 <AddIcon />
               </div>
@@ -93,6 +67,77 @@ const UserDetails = () => {
           {/* Channel Lists here  */}
 
           <div className="flex justify-between py-3 3xl:py-5 border-b-[1px]">
+            <div className="flex items-center gap-[10rem]">
+              <div className="flex gap-5 items-center">
+                <img
+                  className="inline-block  h-10 xl:h-10 xl:w-10 3xl:h-12 3xl:w-12 w-10 rounded-full ring-2 ring-white"
+                  src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt=""
+                />
+                <h4 className="font-24px text-[#181A1E] capitalize">
+                  Stephan Louis
+                </h4>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <div className="ml-[1.5rem]">
+                <Dialog open={open} onOpenChange={setIsOpen}>
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <div className="cursor-pointer">
+                        <Button variant="dropdown" size="dropdown">
+                          Publisher
+                          <ChevronDown size={"15px"} />
+                        </Button>
+                      </div>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end" className="rounded-[8px]">
+                      <DropdownMenuItem className="cursor-pointer flex items-center justify-between">
+                        <div>Publisher</div>
+                        <div className="w-[18px]">
+                          <CheckCircleBlueIcon />
+                        </div>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem className="cursor-pointer ">
+                        Moderator
+                      </DropdownMenuItem>
+                      <DropdownMenuItem className="cursor-pointer text-[#DF1B41]">
+                        <DialogTrigger className=" flex items-center cursor-pointer ">
+                          Revoke Access
+                        </DialogTrigger>
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+
+                  <DialogContent className="flex flex-col justify-center  rounded-[36px] items-center">
+                    <DialogHeader>
+                      <DialogTitle className="text-[1.25rem] font-medium mb-[1rem]">
+                        Are you sure you want to revoke access?
+                      </DialogTitle>
+                    </DialogHeader>
+                    <DialogFooter>
+                      <Button
+                        className="rounded-full px-10"
+                        variant="outline"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        Cancel
+                      </Button>
+                      <Button
+                        className="rounded-full px-10"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        Confirm
+                      </Button>
+                    </DialogFooter>
+                  </DialogContent>
+                </Dialog>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex justify-between py-3">
             <div className="flex items-center gap-[10rem]">
               <div className="flex gap-5 items-center">
                 <img

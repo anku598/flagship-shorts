@@ -38,7 +38,7 @@ const SingleUploadCard = ({ progress, cancel }) => {
         </div>
         {progress !== 100 ? (
           <Progress
-            className="absolute bottom-0 left-0 h-[2px] bg-[#CBD5E8]"
+            className="absolute bottom-0 left-0 h-[4px] bg-[#CBD5E8]"
             value={progress}
           />
         ) : null}
