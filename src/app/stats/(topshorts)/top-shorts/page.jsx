@@ -1,12 +1,27 @@
-import { ScrollArea } from "@/components/ui/scroll-area";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
+import TableLists from "@/components/shorts-ui/TableLists";
+
+const dummyData = [
+  {
+    id: 1,
+    image:
+      "https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    title: "Chorki",
+    views: 12,
+    likes: 120,
+    comments: 20,
+    share: 20,
+  },
+  {
+    id: 2,
+    image:
+      "https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    title: "Chorki",
+    views: 12,
+    likes: 120,
+    comments: 20,
+    share: 20,
+  },
+];
 
 const TopShorts = () => {
   return (
@@ -17,7 +32,7 @@ const TopShorts = () => {
       <div className="font-20px">Top 50 shorts</div>
 
       <div className="table-layout mt-[40px]">
-        <ScrollArea className=" xl: h-[350px] 3xl:h-[700px]">
+        {/* <ScrollArea className=" xl: h-[350px] 3xl:h-[700px]">
           <Table>
             <TableHeader className="bg-transparent ">
               <TableRow>
@@ -460,7 +475,9 @@ const TopShorts = () => {
               </TableRow>
             </TableBody>
           </Table>
-        </ScrollArea>
+        </ScrollArea> */}
+
+        <TableLists data={dummyData} listType="shorts" />
       </div>
     </div>
   );
